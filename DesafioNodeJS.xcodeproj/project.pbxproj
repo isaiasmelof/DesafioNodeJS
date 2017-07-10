@@ -12,6 +12,11 @@
 		9716F9ED1F0C29B80016B446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9716F9EB1F0C29B80016B446 /* Main.storyboard */; };
 		9716F9EF1F0C29B80016B446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9716F9EE1F0C29B80016B446 /* Assets.xcassets */; };
 		9716F9F21F0C29B80016B446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9716F9F01F0C29B80016B446 /* LaunchScreen.storyboard */; };
+		9716F9FE1F0C2BA80016B446 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9716F9FD1F0C2BA80016B446 /* Alamofire.framework */; };
+		9716FA001F0C33940016B446 /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 9716F9FD1F0C2BA80016B446 /* Alamofire.framework */; };
+		97F5110A1F1001CD00CFC958 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F511091F1001CD00CFC958 /* Dog.swift */; };
+		97F5110C1F10040700CFC958 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F5110B1F10040700CFC958 /* Server.swift */; };
+		97F511111F1148B900CFC958 /* DogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F511101F1148B900CFC958 /* DogPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,10 @@
 		9716F9EE1F0C29B80016B446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9716F9F11F0C29B80016B446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9716F9F31F0C29B80016B446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9716F9FD1F0C2BA80016B446 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		97F511091F1001CD00CFC958 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		97F5110B1F10040700CFC958 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		97F511101F1148B900CFC958 /* DogPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9716F9FE1F0C2BA80016B446 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 			children = (
 				9716F9E61F0C29B80016B446 /* DesafioNodeJS */,
 				9716F9E51F0C29B80016B446 /* Products */,
+				9716F9FC1F0C2BA80016B446 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,57 @@
 		9716F9E61F0C29B80016B446 /* DesafioNodeJS */ = {
 			isa = PBXGroup;
 			children = (
+				97F5110F1F11487C00CFC958 /* View */,
+				97F5110E1F11486A00CFC958 /* Presenter */,
+				97F511081F1001B300CFC958 /* Model */,
+				97F511071F10011D00CFC958 /* Server */,
 				9716F9E71F0C29B80016B446 /* AppDelegate.swift */,
-				9716F9E91F0C29B80016B446 /* ViewController.swift */,
-				9716F9EB1F0C29B80016B446 /* Main.storyboard */,
 				9716F9EE1F0C29B80016B446 /* Assets.xcassets */,
-				9716F9F01F0C29B80016B446 /* LaunchScreen.storyboard */,
 				9716F9F31F0C29B80016B446 /* Info.plist */,
 			);
 			path = DesafioNodeJS;
+			sourceTree = "<group>";
+		};
+		9716F9FC1F0C2BA80016B446 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9716F9FD1F0C2BA80016B446 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97F511071F10011D00CFC958 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				97F5110B1F10040700CFC958 /* Server.swift */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		97F511081F1001B300CFC958 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97F511091F1001CD00CFC958 /* Dog.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		97F5110E1F11486A00CFC958 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				97F511101F1148B900CFC958 /* DogPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		97F5110F1F11487C00CFC958 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9716F9F01F0C29B80016B446 /* LaunchScreen.storyboard */,
+				9716F9EB1F0C29B80016B446 /* Main.storyboard */,
+				9716F9E91F0C29B80016B446 /* ViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +128,7 @@
 				9716F9E01F0C29B80016B446 /* Sources */,
 				9716F9E11F0C29B80016B446 /* Frameworks */,
 				9716F9E21F0C29B80016B446 /* Resources */,
+				9716F9FF1F0C2C160016B446 /* Run Script - Carthage */,
 			);
 			buildRules = (
 			);
@@ -124,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9716FA001F0C33940016B446 /* Alamofire.framework in Resources */,
 				9716F9F21F0C29B80016B446 /* LaunchScreen.storyboard in Resources */,
 				9716F9EF1F0C29B80016B446 /* Assets.xcassets in Resources */,
 				9716F9ED1F0C29B80016B446 /* Main.storyboard in Resources */,
@@ -132,6 +188,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9716F9FF1F0C2C160016B446 /* Run Script - Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "Run Script - Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9716F9E01F0C29B80016B446 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +213,9 @@
 			files = (
 				9716F9EA1F0C29B80016B446 /* ViewController.swift in Sources */,
 				9716F9E81F0C29B80016B446 /* AppDelegate.swift in Sources */,
+				97F5110C1F10040700CFC958 /* Server.swift in Sources */,
+				97F511111F1148B900CFC958 /* DogPresenter.swift in Sources */,
+				97F5110A1F1001CD00CFC958 /* Dog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +339,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RT5RW3DL77;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DesafioNodeJS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DesafioNodeJS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.bepiducb.ifm.DesafioNodeJS;
@@ -275,6 +357,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RT5RW3DL77;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DesafioNodeJS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DesafioNodeJS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.bepiducb.ifm.DesafioNodeJS;
@@ -302,6 +389,7 @@
 				9716F9F81F0C29B80016B446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
