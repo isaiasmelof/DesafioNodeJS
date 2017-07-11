@@ -20,12 +20,12 @@ class DogPresenter : NSObject, ServerDelegate {
     
     
     func getAllDogs() {
-        let url = URL(string: "http://localhost:3000/dogs")
+        let url = URL(string: "http://127.0.0.1:3000/dogs")
         Server.sharedInstance.get(url: url!)
     }
     
     func addDog(dog: Dog){
-        let url = URL(string: "http://localhost:3000")
+        let url = URL(string: "http://127.0.0.1:3000")
         let parameters = dog.parseDictionary()
         Server.sharedInstance.post(url: url!, params: parameters)
     }
@@ -33,7 +33,7 @@ class DogPresenter : NSObject, ServerDelegate {
     func deleteDog(dog: Dog) {
         let id = dog.id
         if id > 0 {
-            let url = URL(string: "http://localhost:3000/dogs/\(id)")
+            let url = URL(string: "http://127.0.0.1:3000/dogs/\(id)")
             Server.sharedInstance.delete(url: url!)
         } else {
             print("ID invalido")
@@ -44,7 +44,7 @@ class DogPresenter : NSObject, ServerDelegate {
     func updateDog(dog: Dog) {
         let id = dog.id
         if id > 0 {
-            let url = URL(string: "http://localhost:3000/dogs/\(id)")
+            let url = URL(string: "http://127.0.0.1:3000/dogs/\(id)")
             let parameters = dog.parseDictionary()
             Server.sharedInstance.put(url: url!, params: parameters)
         } else {

@@ -103,7 +103,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func createPostAction(alertController: UIAlertController) -> UIAlertAction {
         
-        let confirmAction = UIAlertAction(title: "Confirm 1", style: .default) { (_) in
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
             var name : String = ""
             var breed : String = ""
             
